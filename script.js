@@ -1,5 +1,5 @@
 const targets = {
-    // الأذكار والكنوز الأساسية (adhkar.html)
+    // ملف الأذكار الأساسي (adhkar.html)
     taraham: 100, 
     ibrahimiyyah: 100, 
     istighfar: 100, 
@@ -11,10 +11,9 @@ const targets = {
     hawqala: 100, 
     muawidhat: 100, 
     shahaada: 100, 
-    tawba: 100, 
     nawm: 50,
     
-    // أذكار الصباح والمساء والأدعية النبوية الجديدة (morning-evening.html)
+    // أذكار الصباح والمساء والأدعية النبوية (morning-evening.html)
     sabah: 50,
     masaa: 50,
     sayedIstighfar: 100,
