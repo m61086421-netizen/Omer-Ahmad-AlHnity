@@ -1,7 +1,21 @@
+// التبديل بين الأقسام من الشريط الجانبي
+function showSection(sectionId) {
+    // إخفاء جميع الأقسام
+    const sections = document.querySelectorAll('.section-block');
+    sections.forEach(sec => sec.classList.add('hidden'));
+
+    // إزالة الحالة النشطة عن كل الأزرار
+    const buttons = document.querySelectorAll('.nav-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // إظهار القسم المطلوب وتفعيل الزر الخاص به
+    document.getElementById(sectionId).classList.remove('hidden');
+    event.target.classList.add('active');
+}
+
 const targets = {
     taraham: 100, istighfar: 100, tasbeeh: 100, tahmeed: 100, tahleel: 100, 
-    takbeer: 100, muawidhat: 100, shahaada: 100, salawat: 100, tawba: 100,
-    sabah: 50, masaa: 50, nawm: 50, istiyqath: 50
+    takbeer: 100, sabah: 50, nawm: 50
 };
 
 let counts = {};
@@ -37,7 +51,6 @@ function updateUI(key) {
     }
 }
 
-// دالة تغيير القارئ في المشغل الصوتي
 function changeAudio(surahId, url) {
     let audioPlayer = document.getElementById('audio-' + surahId);
     if (audioPlayer) {
