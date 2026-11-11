@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #1b4332;
+    --secondary-color: #2d6a4f;
+    --accent-color: #d4af37;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #2b2b2b;
+    --light-text: #666666;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header / Hero */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.bismillah {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.hero .name {
+    font-family: 'Amiri', serif;
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    margin: 10px 0;
+}
+
+.dua-header {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    font-family: 'Amiri', serif;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* Quran Section */
+.quran-item {
+    background: #fafafa;
+    border-right: 4px solid var(--secondary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.quran-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.quran-item audio {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.quran-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 2.2;
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+/* Counters Grid */
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.counter-card {
+    background: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.counter-card:hover {
+    transform: translateY(-3px);
+}
+
+.counter-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.dhikr-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.count-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 10px 0;
+}
+
+.btn-count {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-count:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-reset {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Dua List */
+.dua-item {
+    background: #f9fbf9;
+    border-right: 3px solid var(--accent-color);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 40px;
+    font-size: 0.95rem;
+}
