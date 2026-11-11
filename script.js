@@ -1,39 +1,47 @@
-// حفظ استجابة العدادات داخل المتصفح (Local Storage) حتى لا تضيع الأعداد عند الخروج من الصفحة
-
-const counters = {
-    tasbeeh: 0,
-    tahmeed: 0,
-    tahleel: 0,
-    takbeer: 0,
-    salawat: 0,
-    istighfar: 0
+const targets = {
+    taraham: 100, istighfar: 100, tasbeeh: 100, tahmeed: 100, tahleel: 100, 
+    takbeer: 100, muawidhat: 100, shahaada: 100, salawat: 100, tawba: 100,
+    sabah: 50, masaa: 50, nawm: 50, istiyqath: 50
 };
 
-// تحميل الأعداد المسجلة مسبقاً إن وجدت
+let counts = {};
+
 window.onload = function() {
-    for (let key in counters) {
-        let savedValue = localStorage.getItem('counter_' + key);
-        if (savedValue !== null) {
-            counters[key] = parseInt(savedValue);
-            document.getElementById(key + '-count').innerText = counters[key];
-        }
+    for (let key in targets) {
+        let saved = localStorage.getItem('cnt_' + key);
+        counts[key] = saved ? parseInt(saved) : 0;
+        updateUI(key);
     }
 };
 
-// زيادة العداد
-function increment(type) {
-    if (counters.hasOwnProperty(type)) {
-        counters[type]++;
-        document.getElementById(type + '-count').innerText = counters[type];
-        localStorage.setItem('counter_' + type, counters[type]);
+function increment(key, maxTarget) {
+    counts[key]++;
+    localStorage.setItem('cnt_' + key, counts[key]);
+    updateUI(key);
+}
+
+function resetCount(key) {
+    counts[key] = 0;
+    localStorage.setItem('cnt_' + key, 0);
+    updateUI(key);
+}
+
+function updateUI(key) {
+    let countEl = document.getElementById(key + '-count');
+    let progressEl = document.getElementById(key + '-progress');
+
+    if (countEl) countEl.innerText = counts[key];
+    if (progressEl) {
+        let percentage = Math.min((counts[key] / targets[key]) * 100, 100);
+        progressEl.style.width = percentage + '%';
     }
 }
 
-// إعادة ضبط العداد
-function resetCount(type) {
-    if (counters.hasOwnProperty(type)) {
-        counters[type] = 0;
-        document.getElementById(type + '-count').innerText = 0;
-        localStorage.setItem('counter_' + type, 0);
+// تغيير القارئ في المشغل الصوتي
+function changeAudio(surahId, url) {
+    let audioPlayer = document.getElementById('audio-' + surahId);
+    if (audioPlayer) {
+        audioPlayer.src = url;
+        audioPlayer.play();
     }
 }
