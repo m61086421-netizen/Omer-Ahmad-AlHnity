@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السور القرآنية - عمر أحمد الحنيطي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-title">أقسام الموقع</div>
+        <a href="index.html" class="nav-btn">🏠 الواجهة الرئيسية</a>
+        <a href="surahs.html" class="nav-btn active">📖 قسم السور القرآنية</a>
+        <a href="adhkar.html" class="nav-btn">📿 قسم الأذكار والعدادات</a>
+        <a href="duas.html" class="nav-btn">🤲 قسم الأدعية والمناجاة</a>
+    </aside>
+
+    <div class="main-content">
+        <main class="container" style="padding-top: 30px;">
+            <section class="card">
+                <h2><span class="icon">📖</span> السور القرآنية المسموعة والمكتوبة (بأصوات متعددة القراء)</h2>
+                <div class="quran-container">
+
+                    <!-- سورة الفاتحة -->
+                    <div class="quran-item">
+                        <h3>سورة الفاتحة</h3>
+                        <div class="reciter-select">
+                            <label>اختر القارئ: </label>
+                            <select onchange="changeAudio('fatiha', this.value)">
+                                <option value="https://server6.mp3quran.net/thubti/001.mp3">عبد الباسط عبد الصمد</option>
+                                <option value="https://server8.mp3quran.net/afs/001.mp3">مشاري العفاسي</option>
+                                <option value="https://server13.mp3quran.net/hussary/001.mp3">محمود خليل الحصري</option>
+                            </select>
+                        </div>
+                        <audio id="audio-fatiha" controls preload="none">
+                            <source src="https://server6.mp3quran.net/thubti/001.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <!-- سورة يس -->
+                    <div class="quran-item">
+                        <h3>سورة يس</h3>
+                        <div class="reciter-select">
+                            <label>اختر القارئ: </label>
+                            <select onchange="changeAudio('yasin', this.value)">
+                                <option value="https://server6.mp3quran.net/thubti/036.mp3">عبد الباسط عبد الصمد</option>
+                                <option value="https://server8.mp3quran.net/afs/036.mp3">مشاري العفاسي</option>
+                                <option value="https://server13.mp3quran.net/hussary/036.mp3">محمود خليل الحصري</option>
+                            </select>
+                        </div>
+                        <audio id="audio-yasin" controls preload="none">
+                            <source src="https://server6.mp3quran.net/thubti/036.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <!-- سورة الملك -->
+                    <div class="quran-item">
+                        <h3>سورة الملك</h3>
+                        <div class="reciter-select">
+                            <label>اختر القارئ: </label>
+                            <select onchange="changeAudio('mulk', this.value)">
+                                <option value="https://server6.mp3quran.net/thubti/067.mp3">عبد الباسط عبد الصمد</option>
+                                <option value="https://server8.mp3quran.net/afs/067.mp3">مشاري العفاسي</option>
+                                <option value="https://server13.mp3quran.net/hussary/067.mp3">محمود خليل الحصري</option>
+                            </select>
+                        </div>
+                        <audio id="audio-mulk" controls preload="none">
+                            <source src="https://server6.mp3quran.net/thubti/067.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <!-- سورة الكهف -->
+                    <div class="quran-item">
+                        <h3>سورة الكهف</h3>
+                        <div class="reciter-select">
+                            <label>اختر القارئ: </label>
+                            <select onchange="changeAudio('kahf', this.value)">
+                                <option value="https://server6.mp3quran.net/thubti/018.mp3">عبد الباسط عبد الصمد</option>
+                                <option value="https://server8.mp3quran.net/afs/018.mp3">مشاري العفاسي</option>
+                                <option value="https://server13.mp3quran.net/hussary/018.mp3">محمود خليل الحصري</option>
+                            </select>
+                        </div>
+                        <audio id="audio-kahf" controls preload="none">
+                            <source src="https://server6.mp3quran.net/thubti/018.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>نسأل الله أن يتقبل هذا العمل خالصاً لوجهه الكريم عن روح المرحوم **عمر أحمد الحنيطي**.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
