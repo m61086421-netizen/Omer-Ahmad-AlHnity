@@ -22,7 +22,7 @@
     <div class="main-content">
         <main class="container" style="padding-top: 30px;">
             <section class="card">
-                <h2><span class="icon">📿</span> العداد الإلكتروني الشامل (الهدف: 100 و 50 مرة)</h2>
+                <h2><span class="icon">📿</span> العداد الإلكتروني الشامل للأذكار (الهدف: 100 و 50 مرة)</h2>
                 <div class="counter-grid">
                     
                     <div class="counter-card">
@@ -86,6 +86,46 @@
                     </div>
 
                     <div class="counter-card">
+                        <h3>المعوذات والأذكار الجامعة</h3>
+                        <p class="dhikr-text">قُلْ هُوَ اللَّهُ أَحَدٌ • قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</p>
+                        <div class="target-badge">الهدف: 100 مرة</div>
+                        <div class="count-display"><span id="muawidhat-count">0</span> / 100</div>
+                        <div class="progress-bar"><div class="progress-fill" id="muawidhat-progress"></div></div>
+                        <button class="btn-count" onclick="increment('muawidhat', 100)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('muawidhat')">إعادة ضبط</button>
+                    </div>
+
+                    <div class="counter-card">
+                        <h3>الشهادتان والتوحيد</h3>
+                        <p class="dhikr-text">أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ</p>
+                        <div class="target-badge">الهدف: 100 مرة</div>
+                        <div class="count-display"><span id="shahaada-count">0</span> / 100</div>
+                        <div class="progress-bar"><div class="progress-fill" id="shahaada-progress"></div></div>
+                        <button class="btn-count" onclick="increment('shahaada', 100)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('shahaada')">إعادة ضبط</button>
+                    </div>
+
+                    <div class="counter-card">
+                        <h3>الصلاة على النبي ﷺ</h3>
+                        <p class="dhikr-text">اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ</p>
+                        <div class="target-badge">الهدف: 100 مرة</div>
+                        <div class="count-display"><span id="salawat-count">0</span> / 100</div>
+                        <div class="progress-bar"><div class="progress-fill" id="salawat-progress"></div></div>
+                        <button class="btn-count" onclick="increment('salawat', 100)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('salawat')">إعادة ضبط</button>
+                    </div>
+
+                    <div class="counter-card">
+                        <h3>الاستغفار والتوبة</h3>
+                        <p class="dhikr-text">رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ</p>
+                        <div class="target-badge">الهدف: 100 مرة</div>
+                        <div class="count-display"><span id="tawba-count">0</span> / 100</div>
+                        <div class="progress-bar"><div class="progress-fill" id="tawba-progress"></div></div>
+                        <button class="btn-count" onclick="increment('tawba', 100)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('tawba')">إعادة ضبط</button>
+                    </div>
+
+                    <div class="counter-card">
                         <h3>أذكار الصباح</h3>
                         <p class="dhikr-text">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ</p>
                         <div class="target-badge">الهدف: 50 مرة</div>
@@ -96,6 +136,16 @@
                     </div>
 
                     <div class="counter-card">
+                        <h3>أذكار المساء</h3>
+                        <p class="dhikr-text">أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ</p>
+                        <div class="target-badge">الهدف: 50 مرة</div>
+                        <div class="count-display"><span id="masaa-count">0</span> / 50</div>
+                        <div class="progress-bar"><div class="progress-fill" id="masaa-progress"></div></div>
+                        <button class="btn-count" onclick="increment('masaa', 50)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('masaa')">إعادة ضبط</button>
+                    </div>
+
+                    <div class="counter-card">
                         <h3>أذكار النوم</h3>
                         <p class="dhikr-text">بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي وَبِكَ أَرْفَعُهُ</p>
                         <div class="target-badge">الهدف: 50 مرة</div>
@@ -103,6 +153,16 @@
                         <div class="progress-bar"><div class="progress-fill" id="nawm-progress"></div></div>
                         <button class="btn-count" onclick="increment('nawm', 50)">اضغط للتكرار +</button>
                         <button class="btn-reset" onclick="resetCount('nawm')">إعادة ضبط</button>
+                    </div>
+
+                    <div class="counter-card">
+                        <h3>أذكار الاستيقاظ</h3>
+                        <p class="dhikr-text">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا</p>
+                        <div class="target-badge">الهدف: 50 مرة</div>
+                        <div class="count-display"><span id="istiyqath-count">0</span> / 50</div>
+                        <div class="progress-bar"><div class="progress-fill" id="istiyqath-progress"></div></div>
+                        <button class="btn-count" onclick="increment('istiyqath', 50)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('istiyqath')">إعادة ضبط</button>
                     </div>
 
                 </div>
