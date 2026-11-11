@@ -14,15 +14,15 @@
     <aside class="sidebar">
         <div class="sidebar-title">أقسام الموقع</div>
         <a href="index.html" class="nav-btn">🏠 الواجهة الرئيسية</a>
-        <a href="surahs.html" class="nav-btn active">📖 قسم السور القرآنية</a>
-        <a href="adhkar.html" class="nav-btn">📿 قسم الأذكار والعدادات</a>
-        <a href="duas.html" class="nav-btn">🤲 قسم الأدعية والمناجاة</a>
+        <a href="surahs.html" class="nav-btn active">📖 السور القرآنية</a>
+        <a href="adhkar.html" class="nav-btn">📿 الأذكار والعدادات</a>
+        <a href="duas.html" class="nav-btn">🤲 الأدعية والمناجاة</a>
     </aside>
 
     <div class="main-content">
         <main class="container" style="padding-top: 30px;">
             <section class="card">
-                <h2><span class="icon">📖</span> السور القرآنية المسموعة والمكتوبة (بأصوات متعددة القراء)</h2>
+                <h2><span class="icon">📖</span> السور القرآنية (سورة الفاتحة وسورة الكهف)</h2>
                 <div class="quran-container">
 
                     <!-- سورة الفاتحة -->
@@ -39,38 +39,9 @@
                         <audio id="audio-fatiha" controls preload="none">
                             <source src="https://server6.mp3quran.net/thubti/001.mp3" type="audio/mpeg">
                         </audio>
-                    </div>
-
-                    <!-- سورة يس -->
-                    <div class="quran-item">
-                        <h3>سورة يس</h3>
-                        <div class="reciter-select">
-                            <label>اختر القارئ: </label>
-                            <select onchange="changeAudio('yasin', this.value)">
-                                <option value="https://server6.mp3quran.net/thubti/036.mp3">عبد الباسط عبد الصمد</option>
-                                <option value="https://server8.mp3quran.net/afs/036.mp3">مشاري العفاسي</option>
-                                <option value="https://server13.mp3quran.net/hussary/036.mp3">محمود خليل الحصري</option>
-                            </select>
+                        <div class="quran-text">
+                            <p>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴿١﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿٢﴾ الرَّحْمَٰنِ الرَّحِيمِ ﴿٣﴾ مَالِكِ يَوْمِ الدِّينِ ﴿٤﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿٥﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴿٦﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿٧﴾</p>
                         </div>
-                        <audio id="audio-yasin" controls preload="none">
-                            <source src="https://server6.mp3quran.net/thubti/036.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-
-                    <!-- سورة الملك -->
-                    <div class="quran-item">
-                        <h3>سورة الملك</h3>
-                        <div class="reciter-select">
-                            <label>اختر القارئ: </label>
-                            <select onchange="changeAudio('mulk', this.value)">
-                                <option value="https://server6.mp3quran.net/thubti/067.mp3">عبد الباسط عبد الصمد</option>
-                                <option value="https://server8.mp3quran.net/afs/067.mp3">مشاري العفاسي</option>
-                                <option value="https://server13.mp3quran.net/hussary/067.mp3">محمود خليل الحصري</option>
-                            </select>
-                        </div>
-                        <audio id="audio-mulk" controls preload="none">
-                            <source src="https://server6.mp3quran.net/thubti/067.mp3" type="audio/mpeg">
-                        </audio>
                     </div>
 
                     <!-- سورة الكهف -->
@@ -87,6 +58,9 @@
                         <audio id="audio-kahf" controls preload="none">
                             <source src="https://server6.mp3quran.net/thubti/018.mp3" type="audio/mpeg">
                         </audio>
+                        <div class="quran-text">
+                            <p>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ الَّذِي أَنْزَلَ عَلَى عَبْدِهِ الْكِتَابَ وَلَمْ يَجْعَلْ لَهُ عِوَجَا ﴿١﴾ ... (استمع للتلاوة كاملة بصوت القارئ المفضل لديك أعلاه).</p>
+                        </div>
                     </div>
 
                 </div>
