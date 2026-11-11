@@ -11,44 +11,60 @@
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
-            <h1>صدقة جارية عن روح المغفور له بإذن الله</h1>
-            <h2 class="name">عمر أحمد الحنيطي</h2>
-            <p class="dua-header">اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ وَعَافِهِ وَاعْفُ عَنْهُ وَأَكْرِمْ نُزُلَهُ وَوَسِّعْ مُدْخَلَهُ</p>
-        </div>
-    </header>
+    <!-- القائمة الجانبية للشريط التنقلي -->
+    <aside class="sidebar">
+        <div class="sidebar-title">أقسام الموقع</div>
+        <button class="nav-btn active" onclick="showSection('hero-section')">🏠 الواجهة الرئيسية</button>
+        <button class="nav-btn" onclick="showSection('surahs-section')">📖 قسم السور القرآنية</button>
+        <button class="nav-btn" onclick="showSection('adhkar-section')">📿 قسم الأذكار والعدادات</button>
+        <button class="nav-btn" onclick="showSection('duas-section')">🤲 قسم الأدعية والمناجاة</button>
+    </aside>
 
-    <main class="container">
-        
-        <!-- قسم التلاوات الصوتية لعدة قراء والسور -->
-        <section class="card">
-            <h2><span class="icon">📖</span> سور قرآنية مسموعة ومكتوبة (بأصوات متعددة القراء)</h2>
-            <div class="quran-container">
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
 
-                <!-- سورة الفاتحة -->
-                <div class="quran-item">
+        <!-- واجهة الموقع الرئيسية -->
+        <header id="hero-section" class="hero section-block">
+            <div class="container">
+                <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+                <h1 class="welcome-msg">يا رب تقبل هذا العمل لوجهك الكريم عن روح المرحوم</h1>
+                <h2 class="name">عمر أحمد الحنيطي</h2>
+                <p class="dua-header">اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ وَعَافِهِ وَاعْفُ عَنْهُ وَأَكْرِمْ نُزُلَهُ وَوَسِّعْ مُدْخَلَهُ</p>
+
+                <!-- سورة الفاتحة في الواجهة الرئيسية -->
+                <div class="fatiha-box">
                     <h3>سورة الفاتحة</h3>
-                    <div class="reciter-select">
-                        <label>اختر القارئ: </label>
-                        <select onchange="changeAudio('fatiha', this.value)">
-                            <option value="https://server6.mp3quran.net/thubti/001.mp3">عبد الباسط عبد الصمد</option>
-                            <option value="https://server8.mp3quran.net/afs/001.mp3">مشاري العفاسي</option>
-                            <option value="https://server13.mp3quran.net/hussary/001.mp3">محمود خليل الحصري</option>
-                        </select>
-                    </div>
-                    <audio id="audio-fatiha" controls preload="none">
-                        <source src="https://server6.mp3quran.net/thubti/001.mp3" type="audio/mpeg">
-                    </audio>
                     <div class="quran-text">
                         <p>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴿١﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿٢﴾ الرَّحْمَٰنِ الرَّحِيمِ ﴿٣﴾ مَالِكِ يَوْمِ الدِّينِ ﴿٤﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿٥﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴿٦﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿٧﴾</p>
                     </div>
                 </div>
+            </div>
+        </header>
+
+        <!-- 1. قسم السور القرآنية -->
+        <section id="surahs-section" class="card section-block hidden">
+            <h2><span class="icon">📖</span> السور القرآنية مكتوبة ومسموعة (بأصوات عدة قراء)</h2>
+            <div class="quran-container">
+
+                <!-- سورة الكهف -->
+                <div class="quran-item">
+                    <h3>سورة الكهف</h3>
+                    <div class="reciter-select">
+                        <label>اختر القارئ: </label>
+                        <select onchange="changeAudio('kahf', this.value)">
+                            <option value="https://server6.mp3quran.net/thubti/018.mp3">عبد الباسط عبد الصمد</option>
+                            <option value="https://server8.mp3quran.net/afs/018.mp3">مشاري العفاسي</option>
+                            <option value="https://server13.mp3quran.net/hussary/018.mp3">محمود خليل الحصري</option>
+                        </select>
+                    </div>
+                    <audio id="audio-kahf" controls preload="none">
+                        <source src="https://server6.mp3quran.net/thubti/018.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
 
                 <!-- سورة يس -->
                 <div class="quran-item">
-                    <h3>سورة يس (قلب القرآن)</h3>
+                    <h3>سورة يس</h3>
                     <div class="reciter-select">
                         <label>اختر القارئ: </label>
                         <select onchange="changeAudio('yasin', this.value)">
@@ -60,235 +76,13 @@
                     <audio id="audio-yasin" controls preload="none">
                         <source src="https://server6.mp3quran.net/thubti/036.mp3" type="audio/mpeg">
                     </audio>
-                    <div class="quran-text">
-                        <p>يس ﴿١﴾ وَالْقُرْآنِ الْحَكِيمِ ﴿٢﴾ إِنَّكَ لَمِنَ الْمُرْسَلِينَ ﴿٣﴾ عَلَىٰ صِرَاطٍ مُسْتَقِيمٍ ﴿٤﴾ ... (استمع للتلاوة كاملة بصوت القارئ المفضل لديك أعلاه).</p>
-                    </div>
                 </div>
 
                 <!-- سورة الملك -->
                 <div class="quran-item">
-                    <h3>سورة الملك (المنجية من عذاب القبر)</h3>
+                    <h3>سورة الملك</h3>
                     <div class="reciter-select">
                         <label>اختر القارئ: </label>
                         <select onchange="changeAudio('mulk', this.value)">
                             <option value="https://server6.mp3quran.net/thubti/067.mp3">عبد الباسط عبد الصمد</option>
-                            <option value="https://server8.mp3quran.net/afs/067.mp3">مشاري العفاسي</option>
-                            <option value="https://server13.mp3quran.net/hussary/067.mp3">محمود خليل الحصري</option>
-                        </select>
-                    </div>
-                    <audio id="audio-mulk" controls preload="none">
-                        <source src="https://server6.mp3quran.net/thubti/067.mp3" type="audio/mpeg">
-                    </audio>
-                    <div class="quran-text">
-                        <p>تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ ﴿١﴾ ... (استمع للتلاوة كاملة بصوت القارئ المفضل لديك أعلاه).</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- قسم العدادات المطلوبة (100 مرة) -->
-        <section class="card">
-            <h2><span class="icon">📿</span> العداد الإلكتروني للأذكار (الهدف: 100 مرة لكل ذكر)</h2>
-            <div class="counter-grid">
-                
-                <div class="counter-card" id="card-taraham">
-                    <h3>الترحم على الميت</h3>
-                    <p class="dhikr-text">اللَّهُمَّ ارْحَمْ عُمَرَ أَحْمَدَ الْحُنَيْطِي وَاغْفِرْ لَهُ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="taraham-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="taraham-progress"></div></div>
-                    <button class="btn-count" onclick="increment('taraham', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('taraham')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-istighfar">
-                    <h3>الاستغفار</h3>
-                    <p class="dhikr-text">أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ وَأَتُوبُ إِلَيْهِ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="istighfar-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="istighfar-progress"></div></div>
-                    <button class="btn-count" onclick="increment('istighfar', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('istighfar')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-tasbeeh">
-                    <h3>التسبيح</h3>
-                    <p class="dhikr-text">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ ، سُبْحَانَ اللَّهِ الْعَظِيمِ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="tasbeeh-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="tasbeeh-progress"></div></div>
-                    <button class="btn-count" onclick="increment('tasbeeh', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('tasbeeh')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-tahmeed">
-                    <h3>التحميد</h3>
-                    <p class="dhikr-text">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ كَثِيرًا</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="tahmeed-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="tahmeed-progress"></div></div>
-                    <button class="btn-count" onclick="increment('tahmeed', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('tahmeed')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-tahleel">
-                    <h3>التهليل</h3>
-                    <p class="dhikr-text">لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="tahleel-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="tahleel-progress"></div></div>
-                    <button class="btn-count" onclick="increment('tahleel', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('tahleel')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-takbeer">
-                    <h3>التكبير</h3>
-                    <p class="dhikr-text">اللَّهُ أَكْبَرُ كَبِيرًا وَالْحَمْدُ لِلَّهِ كَثِيرًا</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="takbeer-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="takbeer-progress"></div></div>
-                    <button class="btn-count" onclick="increment('takbeer', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('takbeer')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-muawidhat">
-                    <h3>المعوذات والأذكار الجامعة</h3>
-                    <p class="dhikr-text">قُلْ هُوَ اللَّهُ أَحَدٌ • قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="muawidhat-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="muawidhat-progress"></div></div>
-                    <button class="btn-count" onclick="increment('muawidhat', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('muawidhat')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-shahaada">
-                    <h3>الشهادتان والتوحيد</h3>
-                    <p class="dhikr-text">أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="shahaada-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="shahaada-progress"></div></div>
-                    <button class="btn-count" onclick="increment('shahaada', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('shahaada')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-salawat">
-                    <h3>الصلاة على النبي ﷺ</h3>
-                    <p class="dhikr-text">اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="salawat-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="salawat-progress"></div></div>
-                    <button class="btn-count" onclick="increment('salawat', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('salawat')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card" id="card-tawba">
-                    <h3>الاستغفار والتوبة</h3>
-                    <p class="dhikr-text">رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ</p>
-                    <div class="target-badge">الهدف: 100 مرة</div>
-                    <div class="count-display"><span id="tawba-count">0</span> / 100</div>
-                    <div class="progress-bar"><div class="progress-fill" id="tawba-progress"></div></div>
-                    <button class="btn-count" onclick="increment('tawba', 100)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('tawba')">إعادة ضبط</button>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- قسم أذكار الصباح والمساء (50 مرة) -->
-        <section class="card">
-            <h2><span class="icon">🌅</span> أذكار الصباح والمساء (الهدف: 50 مرة لكل ذكر)</h2>
-            <div class="counter-grid">
-                <div class="counter-card">
-                    <h3>أذكار الصباح</h3>
-                    <p class="dhikr-text">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ</p>
-                    <div class="target-badge">الهدف: 50 مرة</div>
-                    <div class="count-display"><span id="sabah-count">0</span> / 50</div>
-                    <div class="progress-bar"><div class="progress-fill" id="sabah-progress"></div></div>
-                    <button class="btn-count" onclick="increment('sabah', 50)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('sabah')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card">
-                    <h3>أذكار المساء</h3>
-                    <p class="dhikr-text">أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ</p>
-                    <div class="target-badge">الهدف: 50 مرة</div>
-                    <div class="count-display"><span id="masaa-count">0</span> / 50</div>
-                    <div class="progress-bar"><div class="progress-fill" id="masaa-progress"></div></div>
-                    <button class="btn-count" onclick="increment('masaa', 50)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('masaa')">إعادة ضبط</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم أذكار النوم والاستيقاظ (50 مرة) -->
-        <section class="card">
-            <h2><span class="icon">🌙</span> أذكار النوم والاستيقاظ (الهدف: 50 مرة لكل ذكر)</h2>
-            <div class="counter-grid">
-                <div class="counter-card">
-                    <h3>أذكار النوم</h3>
-                    <p class="dhikr-text">بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي وَبِكَ أَرْفَعُهُ</p>
-                    <div class="target-badge">الهدف: 50 مرة</div>
-                    <div class="count-display"><span id="nawm-count">0</span> / 50</div>
-                    <div class="progress-bar"><div class="progress-fill" id="nawm-progress"></div></div>
-                    <button class="btn-count" onclick="increment('nawm', 50)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('nawm')">إعادة ضبط</button>
-                </div>
-
-                <div class="counter-card">
-                    <h3>أذكار الاستيقاظ</h3>
-                    <p class="dhikr-text">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا</p>
-                    <div class="target-badge">الهدف: 50 مرة</div>
-                    <div class="count-display"><span id="istiyqath-count">0</span> / 50</div>
-                    <div class="progress-bar"><div class="progress-fill" id="istiyqath-progress"></div></div>
-                    <button class="btn-count" onclick="increment('istiyqath', 50)">اضغط للتكرار +</button>
-                    <button class="btn-reset" onclick="resetCount('istiyqath')">إعادة ضبط</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم الأدعية الشاملة (للمتوفي عمر، أهله، وعموم المسلمين) -->
-        <section class="card">
-            <h2><span class="icon">🤲</span> أدعية ومناجاة (للمرحوم عمر، لأهله، ولجميع المسلمين)</h2>
-            
-            <h3 class="sub-header">أولاً: أدعية ومناجاة للمرحوم عمر أحمد الحنيطي</h3>
-            <div class="dua-grid">
-                <div class="dua-box"><span class="dua-num">1</span> اللَّهُمَّ اغْفِرْ لِعُمَرَ أَحْمَدَ الْحُنَيْطِي وَارْحَمْهُ وَعَافِهِ وَاعْفُ عَنْهُ.</div>
-                <div class="dua-box"><span class="dua-num">2</span> اللَّهُمَّ أَكْرِمْ نُزُلَهُ وَوَسِّعْ مُدْخَلَهُ وَاغْسِلْهُ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ.</div>
-                <div class="dua-box"><span class="dua-num">3</span> اللَّهُمَّ نَقِّهِ مِنَ الْخَطَايَا كَمَا يُنَقَّى الثَّوْبُ الأَبْيَضُ مِنَ الدَّنَسِ.</div>
-                <div class="dua-box"><span class="dua-num">4</span> اللَّهُمَّ أَبْدِلْهُ دَارًا خَيْرًا مِنْ دَارِهِ وَأَهْلًا خَيْرًا مِنْ أَهْلِهِ.</div>
-                <div class="dua-box"><span class="dua-num">5</span> اللَّهُمَّ أَدْخِلْهُ الْجَنَّةَ وَأَعِذْهُ مِنْ عَذَابِ الْقَبْرِ وَعَذَابِ النَّارِ.</div>
-                <div class="dua-box"><span class="dua-num">6</span> اللَّهُمَّ اجْعَلْ قَبْرَهُ رَوْضَةً مِنْ رِيَاضِ الْجَنَّةِ وَلا تَجْعَلْهُ حُفْرَةً مِنْ حُفَرِ النَّارِ.</div>
-                <div class="dua-box"><span class="dua-num">7</span> اللَّهُمَّ افْسَحْ لَهُ فِي قَبْرِهِ مَدَّ بَصَرِهِ وَأَنْزِلْ عَلَيْهِ الضِّيَاءَ وَالنُّورَ.</div>
-                <div class="dua-box"><span class="dua-num">8</span> اللَّهُمَّ اِمْلَأْ قَبْرَهُ بِالرِّضَا وَالنُّورِ وَالْفُسْحَةِ وَالسُّرُورِ.</div>
-                <div class="dua-box"><span class="dua-num">9</span> اللَّهُمَّ إِنَّ عُمَرَ فِي ذِمَّتِكَ وَحَبْلِ جِوَارِكَ، فَقِهِ فِتْنَةَ الْقَبْرِ وَعَذَابَ النَّارِ.</div>
-                <div class="dua-box"><span class="dua-num">10</span> اللَّهُمَّ أَنْتَ أَهْلُ الْوَفَاءِ وَالْحَقِّ فَاغْفِرْ لَهُ وَارْحَمْهُ إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ.</div>
-            </div>
-
-            <h3 class="sub-header" style="margin-top: 30px;">ثانياً: أدعية لأهل الميت ووالديه ومحبيه</h3>
-            <div class="dua-grid">
-                <div class="dua-box"><span class="dua-num">1</span> اللَّهُمَّ رَبِّطْ عَلَى قُلُوبِ أَهْلِ عُمَرَ وَأَلْهِمْهُمُ الصَّبْرَ وَالسَّلْوَانَ.</div>
-                <div class="dua-box"><span class="dua-num">2</span> اللَّهُمَّ أَنزِلِ السَّكِينَةَ فِي قُلُوبِهِمْ وَاجْعَلْ فِرَاقَهُ رِفْعَةً لَهُمْ فِي الدَّرَجَاتِ.</div>
-                <div class="dua-box"><span class="dua-num">3</span> اللَّهُمَّ أَجِرْهُمْ فِي مُصِيبَتِهِمْ وَأَخْلِفْ لَهُمْ خَيْرًا مِنْهَا.</div>
-                <div class="dua-box"><span class="dua-num">4</span> اللَّهُمَّ اِجْعَلْ عُمَرَ شَفِيعًا لِوَالِدَيْهِ وَسَنَدًا لَهُمْ يَوْمَ الْقِيَامَةِ.</div>
-            </div>
-
-            <h3 class="sub-header" style="margin-top: 30px;">ثالثاً: أدعية لجميع المسلمين والمسلمات (الأحياء والأموات)</h3>
-            <div class="dua-grid">
-                <div class="dua-box"><span class="dua-num">1</span> اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ، وَالْمُسْلِمِينَ وَالْمُسْلِمَاتِ، الأَحْيَاءِ مِنْهُمْ وَالأَمْوَاتِ.</div>
-                <div class="dua-box"><span class="dua-num">2</span> اللَّهُمَّ اِرْحَمْ مَوْتَانَا وَمَوْتَى الْمُسْلِمِينَ وَاشْفِ مَرْضَانَا وَمَرْضَى الْمُسْلِمِينَ.</div>
-                <div class="dua-box"><span class="dua-num">3</span> اللَّهُمَّ انْشُرْ رَحْمَتَكَ عَلَى قُبُورِ مَوْتَى الْمُسْلِمِينَ أَجْمَعِينَ.</div>
-                <div class="dua-box"><span class="dua-num">4</span> اللَّهُمَّ اهْدِ قُلُوبَنَا وَثَبِّتْنَا عَلَى دِينِكَ حَتَّى نَلْقَاكَ.</div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>نسأل الله أن يتقبل هذا العمل خالصاً لوجهه الكريم وأن يجعله نوراً ورحمةً ومغفرةً للمرحوم **عمر أحمد الحنيطي**.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                            <option value="
