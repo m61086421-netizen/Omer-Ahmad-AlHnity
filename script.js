@@ -1,4 +1,5 @@
 const targets = {
+    // ملف الأذكار والكنوز الأساسي
     taraham: 100, 
     ibrahimiyyah: 100, 
     istighfar: 100, 
@@ -11,10 +12,15 @@ const targets = {
     muawidhat: 100, 
     shahaada: 100, 
     tawba: 100,
-    sabah: 50, 
-    masaa: 50, 
     nawm: 50, 
-    istiyqath: 50
+    
+    // أذكار الصباح والمساء والاستيقاظ (الملف الجديد)
+    sabah: 50,
+    sayedIstighfar: 100,
+    masaa: 50,
+    ayatKursi: 100,
+    istiyqath: 50,
+    radayt: 100
 };
 
 let counts = {};
