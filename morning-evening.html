@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أذكار الصباح والمساء والاستيقاظ - عمر أحمد الحنيطي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-title">أقسام الموقع</div>
+        <a href="index.html" class="nav-btn">🏠 الواجهة الرئيسية</a>
+        <a href="surahs.html" class="nav-btn">📖 السور القرآنية</a>
+        <a href="adhkar.html" class="nav-btn">📿 الأذكار والكنوز</a>
+        <a href="morning-evening.html" class="nav-btn active">☀️ أذكار الصباح والمساء</a>
+        <a href="duas.html" class="nav-btn">🤲 الأدعية والمناجاة</a>
+    </aside>
+
+    <div class="main-content">
+        <main class="container" style="padding-top: 30px;">
+            <section class="card">
+                <h2><span class="icon">☀️</span> حصن المسلم: أذكار الصباح والمساء والاستيقاظ (أجر مضاعف عن روح عمر)</h2>
+                <div class="counter-grid">
+                    
+                    <!-- 1. أذكار الصباح الكبرى -->
+                    <div class="counter-card">
+                        <h3>أذكار الصباح (أصبحنا وأصبح الملك لله)</h3>
+                        <p class="dhikr-text">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ...</p>
+                        <div class="target-badge">الهدف: 50 مرة</div>
+                        <div class="count-display"><span id="sabah-count">0</span> / 50</div>
+                        <div class="progress-bar"><div class="progress-fill" id="sabah-progress"></div></div>
+                        <button class="btn-count" onclick="increment('sabah', 50)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('sabah')">إعادة ضبط</button>
+                    </div>
+
+                    <!-- 2. سيد الاستغفار للصباح والمساء -->
+                    <div class="counter-card">
+                        <h3>سيد الاستغفار العظيم</h3>
+                        <p class="dhikr-text">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ...</p>
+                        <div class="target-badge">الهدف: 100 مرة</div>
+                        <div class="count-display"><span id="sayed-istighfar-count">0</span> / 100</div>
+                        <div class="progress-bar"><div class="progress-fill" id="sayed-istighfar-progress"></div></div>
+                        <button class="btn-count" onclick="increment('sayedIstighfar', 100)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('sayedIstighfar')">إعادة ضبط</button>
+                    </div>
+
+                    <!-- 3. أذكار المساء الكبرى -->
+                    <div class="counter-card">
+                        <h3>أذكار المساء (أمسينا وأمسى الملك لله)</h3>
+                        <p class="dhikr-text">أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ...</p>
+                        <div class="target-badge">الهدف: 50 مرة</div>
+                        <div class="count-display"><span id="masaa-count">0</span> / 50</div>
+                        <div class="progress-bar"><div class="progress-fill" id="masaa-progress"></div></div>
+                        <button class="btn-count" onclick="increment('masaa', 50)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('masaa')">إعادة ضبط</button>
+                    </div>
+
+                    <!-- 4. آية الكرسي والمعوذات المتكررة -->
+                    <div class="counter-card">
+                        <h3>آية الكرسي والمعوذات (حماية وبركة)</h3>
+                        <p class="dhikr-text">اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ... (وقراءة الإخلاص والمعوذات)</p>
+                        <div class="target-badge">الهدف: 100 مرة</div>
+                        <div class="count-display"><span id="ayat-kursi-count">0</span> / 100</div>
+                        <div class="progress-bar"><div class="progress-fill" id="ayat-kursi-progress"></div></div>
+                        <button class="btn-count" onclick="increment('ayatKursi', 100)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('ayatKursi')">إعادة ضبط</button>
+                    </div>
+
+                    <!-- 5. أذكار الاستيقاظ من النوم -->
+                    <div class="counter-card">
+                        <h3>أذكار الاستيقاظ الشاملة</h3>
+                        <p class="dhikr-text">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</p>
+                        <div class="target-badge">الهدف: 50 مرة</div>
+                        <div class="count-display"><span id="istiyqath-count">0</span> / 50</div>
+                        <div class="progress-bar"><div class="progress-fill" id="istiyqath-progress"></div></div>
+                        <button class="btn-count" onclick="increment('istiyqath', 50)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('istiyqath')">إعادة ضبط</button>
+                    </div>
+
+                    <!-- 6. الرضا بالله رباً وبالإسلام ديناً -->
+                    <div class="counter-card">
+                        <h3>دعاء الرضا (رضيت بالله رباً)</h3>
+                        <p class="dhikr-text">رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلَامِ دِينرًا، وَبِمُحَمَّدٍ ﷺ نَبِيًّا</p>
+                        <div class="target-badge">الهدف: 100 مرة</div>
+                        <div class="count-display"><span id="radayt-count">0</span> / 100</div>
+                        <div class="progress-bar"><div class="progress-fill" id="radayt-progress"></div></div>
+                        <button class="btn-count" onclick="increment('radayt', 100)">اضغط للتكرار +</button>
+                        <button class="btn-reset" onclick="resetCount('radayt')">إعادة ضبط</button>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>نسأل الله أن يتقبل هذا العمل خالصاً لوجهه الكريم عن روح المرحوم **عمر أحمد الحنيطي**.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
