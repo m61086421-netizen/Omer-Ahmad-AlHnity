@@ -14,17 +14,18 @@
     <aside class="sidebar">
         <div class="sidebar-title">أقسام الموقع</div>
         <a href="index.html" class="nav-btn">🏠 الواجهة الرئيسية</a>
-        <a href="surahs.html" class="nav-btn">📖 قسم السور القرآنية</a>
-        <a href="adhkar.html" class="nav-btn active">📿 قسم الأذكار والعدادات</a>
-        <a href="duas.html" class="nav-btn">🤲 قسم الأدعية والمناجاة</a>
+        <a href="surahs.html" class="nav-btn">📖 السور القرآنية</a>
+        <a href="adhkar.html" class="nav-btn active">📿 الأذكار والعدادات</a>
+        <a href="duas.html" class="nav-btn">🤲 الأدعية والمناجاة</a>
     </aside>
 
     <div class="main-content">
         <main class="container" style="padding-top: 30px;">
             <section class="card">
-                <h2><span class="icon">📿</span> العداد الإلكتروني الشامل للأذكار (الهدف: 100 و 50 مرة)</h2>
+                <h2><span class="icon">📿</span> العداد الإلكتروني الشامل للأذكار</h2>
                 <div class="counter-grid">
                     
+                    <!-- 1. الترحم 100 -->
                     <div class="counter-card">
                         <h3>الترحم على الميت</h3>
                         <p class="dhikr-text">اللَّهُمَّ ارْحَمْ عُمَرَ أَحْمَدَ الْحُنَيْطِي وَاغْفِرْ لَهُ</p>
@@ -35,6 +36,7 @@
                         <button class="btn-reset" onclick="resetCount('taraham')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 2. الاستغفار 100 -->
                     <div class="counter-card">
                         <h3>الاستغفار</h3>
                         <p class="dhikr-text">أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ وَأَتُوبُ إِلَيْهِ</p>
@@ -45,6 +47,7 @@
                         <button class="btn-reset" onclick="resetCount('istighfar')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 3. التسبيح 100 -->
                     <div class="counter-card">
                         <h3>التسبيح</h3>
                         <p class="dhikr-text">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ ، سُبْحَانَ اللَّهِ الْعَظِيمِ</p>
@@ -55,6 +58,7 @@
                         <button class="btn-reset" onclick="resetCount('tasbeeh')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 4. التحميد 100 -->
                     <div class="counter-card">
                         <h3>التحميد</h3>
                         <p class="dhikr-text">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ كَثِيرًا</p>
@@ -65,6 +69,7 @@
                         <button class="btn-reset" onclick="resetCount('tahmeed')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 5. التهليل 100 -->
                     <div class="counter-card">
                         <h3>التهليل</h3>
                         <p class="dhikr-text">لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</p>
@@ -75,6 +80,7 @@
                         <button class="btn-reset" onclick="resetCount('tahleel')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 6. التكبير 100 -->
                     <div class="counter-card">
                         <h3>التكبير</h3>
                         <p class="dhikr-text">اللَّهُ أَكْبَرُ كَبِيرًا وَالْحَمْدُ لِلَّهِ كَثِيرًا</p>
@@ -85,6 +91,7 @@
                         <button class="btn-reset" onclick="resetCount('takbeer')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 7. المعوذات والأذكار الجامعة 100 -->
                     <div class="counter-card">
                         <h3>المعوذات والأذكار الجامعة</h3>
                         <p class="dhikr-text">قُلْ هُوَ اللَّهُ أَحَدٌ • قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</p>
@@ -95,6 +102,7 @@
                         <button class="btn-reset" onclick="resetCount('muawidhat')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 8. الشهادتان والتوحيد 100 -->
                     <div class="counter-card">
                         <h3>الشهادتان والتوحيد</h3>
                         <p class="dhikr-text">أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ</p>
@@ -105,6 +113,7 @@
                         <button class="btn-reset" onclick="resetCount('shahaada')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 9. الصلاة على النبي 100 -->
                     <div class="counter-card">
                         <h3>الصلاة على النبي ﷺ</h3>
                         <p class="dhikr-text">اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ</p>
@@ -115,6 +124,7 @@
                         <button class="btn-reset" onclick="resetCount('salawat')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 10. الاستغفار والتوبة 100 -->
                     <div class="counter-card">
                         <h3>الاستغفار والتوبة</h3>
                         <p class="dhikr-text">رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ</p>
@@ -125,6 +135,7 @@
                         <button class="btn-reset" onclick="resetCount('tawba')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 11. أذكار الصباح 50 -->
                     <div class="counter-card">
                         <h3>أذكار الصباح</h3>
                         <p class="dhikr-text">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ</p>
@@ -135,6 +146,7 @@
                         <button class="btn-reset" onclick="resetCount('sabah')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 12. أذكار المساء 50 -->
                     <div class="counter-card">
                         <h3>أذكار المساء</h3>
                         <p class="dhikr-text">أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ</p>
@@ -145,6 +157,7 @@
                         <button class="btn-reset" onclick="resetCount('masaa')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 13. أذكار النوم 50 -->
                     <div class="counter-card">
                         <h3>أذكار النوم</h3>
                         <p class="dhikr-text">بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي وَبِكَ أَرْفَعُهُ</p>
@@ -155,6 +168,7 @@
                         <button class="btn-reset" onclick="resetCount('nawm')">إعادة ضبط</button>
                     </div>
 
+                    <!-- 14. أذكار الاستيقاظ 50 -->
                     <div class="counter-card">
                         <h3>أذكار الاستيقاظ</h3>
                         <p class="dhikr-text">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا</p>
