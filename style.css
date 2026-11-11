@@ -33,6 +33,7 @@ body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-color); co
 }
 
 .nav-btn {
+    display: block;
     width: 100%;
     background: none;
     border: none;
@@ -40,6 +41,7 @@ body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-color); co
     padding: 12px 15px;
     text-align: right;
     font-size: 1rem;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 6px;
     margin-bottom: 8px;
@@ -60,27 +62,29 @@ body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-color); co
     padding: 20px;
 }
 
-.hidden { display: none; }
-
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: #ffffff; text-align: center; padding: 40px 20px; border-radius: 12px; border-bottom: 5px solid var(--accent-color); margin-bottom: 25px;
+    color: #ffffff; text-align: center; padding: 50px 20px; border-radius: 12px; border-bottom: 5px solid var(--accent-color); margin-bottom: 25px;
 }
 .bismillah { font-family: 'Amiri', serif; font-size: 1.4rem; color: var(--accent-color); display: block; }
-.welcome-msg { font-size: 1.4rem; font-weight: 500; margin-top: 10px; }
-.hero .name { font-family: 'Amiri', serif; font-size: 2.6rem; color: var(--accent-color); margin: 10px 0; }
+.welcome-msg { font-size: 1.5rem; font-weight: 500; margin-top: 10px; }
+.hero .name { font-family: 'Amiri', serif; font-size: 2.8rem; color: var(--accent-color); margin: 10px 0; }
+.dua-header { font-size: 1.1rem; opacity: 0.9; }
 
-.fatiha-box { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-top: 20px; border: 1px solid var(--accent-color); }
-.fatiha-box h3 { font-family: 'Amiri', serif; color: var(--accent-color); font-size: 1.5rem; }
+.fatiha-box { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px; margin-top: 25px; border: 1px solid var(--accent-color); }
+.fatiha-box h3 { font-family: 'Amiri', serif; color: var(--accent-color); font-size: 1.6rem; margin-bottom: 10px; }
 
 .card { background: var(--card-bg); border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 .card h2 { font-family: 'Amiri', serif; color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 25px; font-size: 1.8rem; }
 
-.sub-header { font-family: 'Amiri', serif; color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px; border-right: 4px solid var(--accent-color); padding-right: 10px; }
+.sub-header { font-family: 'Amiri', serif; color: var(--secondary-color); font-size: 1.4rem; margin-bottom: 15px; border-right: 4px solid var(--accent-color); padding-right: 10px; }
 
 .quran-item { background: #fafafa; border-right: 4px solid var(--secondary-color); padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+.reciter-select { margin-bottom: 10px; font-weight: bold; }
 .reciter-select select { padding: 5px 10px; border-radius: 4px; border: 1px solid #ccc; font-family: 'Tajawal', sans-serif; }
-.quran-item audio { width: 100%; margin-top: 10px; }
+.quran-item audio { width: 100%; margin-top: 5px; }
+
+.quran-text { font-family: 'Amiri', serif; font-size: 1.3rem; color: #333; line-height: 2.2; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #eee; }
 
 .counter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
 .counter-card { background: #fdfdfd; border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px; text-align: center; }
@@ -93,9 +97,11 @@ body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-color); co
 .progress-fill { height: 100%; width: 0%; background: var(--accent-color); transition: width 0.3s ease; }
 
 .btn-count { width: 100%; background-color: var(--primary-color); color: white; border: none; padding: 10px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; }
+.btn-count:hover { background-color: var(--secondary-color); }
 .btn-reset { background: none; border: none; color: #888; font-size: 0.85rem; margin-top: 8px; cursor: pointer; text-decoration: underline; }
 
 .dua-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
 .dua-box { background: #fafafa; border-right: 4px solid var(--accent-color); padding: 15px; border-radius: 6px; font-family: 'Amiri', serif; font-size: 1.2rem; }
+.dua-num { font-weight: bold; color: var(--primary-color); margin-left: 8px; }
 
 footer { text-align: center; padding: 25px 0; background: var(--primary-color); color: white; margin-top: 40px; border-radius: 8px; }
