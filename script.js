@@ -1,7 +1,20 @@
 const targets = {
-    taraham: 100, istighfar: 100, tasbeeh: 100, tahmeed: 100, tahleel: 100, 
-    takbeer: 100, muawidhat: 100, shahaada: 100, salawat: 100, tawba: 100,
-    sabah: 50, masaa: 50, nawm: 50, istiyqath: 50
+    taraham: 100, 
+    ibrahimiyyah: 100, 
+    istighfar: 100, 
+    tasbeeh: 100, 
+    tasbeehExtra: 100, 
+    tahmeed: 100, 
+    tahleel: 100, 
+    takbeer: 100, 
+    hawqala: 100, 
+    muawidhat: 100, 
+    shahaada: 100, 
+    tawba: 100,
+    sabah: 50, 
+    masaa: 50, 
+    nawm: 50, 
+    istiyqath: 50
 };
 
 let counts = {};
