@@ -11,27 +11,25 @@
 </head>
 <body>
 
-    <!-- القائمة الجانبية للشريط التنقلي -->
+    <!-- الشريط الجانبي للتنقل الفخم -->
     <aside class="sidebar">
         <div class="sidebar-title">أقسام الموقع</div>
-        <button class="nav-btn active" onclick="showSection('hero-section')">🏠 الواجهة الرئيسية</button>
-        <button class="nav-btn" onclick="showSection('surahs-section')">📖 قسم السور القرآنية</button>
-        <button class="nav-btn" onclick="showSection('adhkar-section')">📿 قسم الأذكار والعدادات</button>
-        <button class="nav-btn" onclick="showSection('duas-section')">🤲 قسم الأدعية والمناجاة</button>
+        <a href="index.html" class="nav-btn active">🏠 الواجهة الرئيسية</a>
+        <a href="surahs.html" class="nav-btn">📖 قسم السور القرآنية</a>
+        <a href="adhkar.html" class="nav-btn">📿 قسم الأذكار والعدادات</a>
+        <a href="duas.html" class="nav-btn">🤲 قسم الأدعية والمناجاة</a>
     </aside>
 
     <!-- المحتوى الرئيسي -->
     <div class="main-content">
-
-        <!-- واجهة الموقع الرئيسية -->
-        <header id="hero-section" class="hero section-block">
+        <header class="hero">
             <div class="container">
                 <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
                 <h1 class="welcome-msg">يا رب تقبل هذا العمل لوجهك الكريم عن روح المرحوم</h1>
                 <h2 class="name">عمر أحمد الحنيطي</h2>
                 <p class="dua-header">اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ وَعَافِهِ وَاعْفُ عَنْهُ وَأَكْرِمْ نُزُلَهُ وَوَسِّعْ مُدْخَلَهُ</p>
 
-                <!-- سورة الفاتحة في الواجهة الرئيسية -->
+                <!-- سورة الفاتحة -->
                 <div class="fatiha-box">
                     <h3>سورة الفاتحة</h3>
                     <div class="quran-text">
@@ -41,48 +39,11 @@
             </div>
         </header>
 
-        <!-- 1. قسم السور القرآنية -->
-        <section id="surahs-section" class="card section-block hidden">
-            <h2><span class="icon">📖</span> السور القرآنية مكتوبة ومسموعة (بأصوات عدة قراء)</h2>
-            <div class="quran-container">
-
-                <!-- سورة الكهف -->
-                <div class="quran-item">
-                    <h3>سورة الكهف</h3>
-                    <div class="reciter-select">
-                        <label>اختر القارئ: </label>
-                        <select onchange="changeAudio('kahf', this.value)">
-                            <option value="https://server6.mp3quran.net/thubti/018.mp3">عبد الباسط عبد الصمد</option>
-                            <option value="https://server8.mp3quran.net/afs/018.mp3">مشاري العفاسي</option>
-                            <option value="https://server13.mp3quran.net/hussary/018.mp3">محمود خليل الحصري</option>
-                        </select>
-                    </div>
-                    <audio id="audio-kahf" controls preload="none">
-                        <source src="https://server6.mp3quran.net/thubti/018.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-                <!-- سورة يس -->
-                <div class="quran-item">
-                    <h3>سورة يس</h3>
-                    <div class="reciter-select">
-                        <label>اختر القارئ: </label>
-                        <select onchange="changeAudio('yasin', this.value)">
-                            <option value="https://server6.mp3quran.net/thubti/036.mp3">عبد الباسط عبد الصمد</option>
-                            <option value="https://server8.mp3quran.net/afs/036.mp3">مشاري العفاسي</option>
-                            <option value="https://server13.mp3quran.net/hussary/036.mp3">محمود خليل الحصري</option>
-                        </select>
-                    </div>
-                    <audio id="audio-yasin" controls preload="none">
-                        <source src="https://server6.mp3quran.net/thubti/036.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-                <!-- سورة الملك -->
-                <div class="quran-item">
-                    <h3>سورة الملك</h3>
-                    <div class="reciter-select">
-                        <label>اختر القارئ: </label>
-                        <select onchange="changeAudio('mulk', this.value)">
-                            <option value="https://server6.mp3quran.net/thubti/067.mp3">عبد الباسط عبد الصمد</option>
-                            <option value="
+        <footer>
+            <div class="container">
+                <p>نسأل الله أن يتقبل هذا العمل خالصاً لوجهه الكريم وأن يجعله نوراً ورحمةً للمرحوم **عمر أحمد الحنيطي**.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
