@@ -37,7 +37,7 @@ function updateUI(key) {
     }
 }
 
-// تغيير القارئ في المشغل الصوتي
+// دالة تغيير القارئ في المشغل الصوتي
 function changeAudio(surahId, url) {
     let audioPlayer = document.getElementById('audio-' + surahId);
     if (audioPlayer) {
